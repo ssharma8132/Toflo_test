@@ -15,16 +15,16 @@ if num < 99 or num > 999:  # check input is correct or not
 elif j[1] - j[0] < j[2] - j[1]:  # finding minimum difference
     remain = j[1] - j[0]
     print('Minimum number:',remain)
-    fin = (j[0]+remain)
-    j[0] = fin
+    new_index_value = (j[0]+remain)
+    j[0] = new_index_value
     j[1],j[2] = j[2],j[1]
     print('Palindrome:',*j, sep="")
 
 else:
     final_remain = j[2]-j[1]
     print('Minimum number:',final_remain)
-    jin = (j[1]+final_remain)
-    j[1] = jin
+    update_index_value = (j[1]+final_remain)
+    j[1] = update_index_value
     j[1],j[0] = j[0],j[1]
     print('Palindrome: ',*j, sep="")
 
